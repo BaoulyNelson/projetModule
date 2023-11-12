@@ -1,0 +1,5 @@
+# Exclure les fichiers pycache
+__pycache__
+
+# Exclure les fichiers logs
+
