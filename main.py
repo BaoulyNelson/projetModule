@@ -1,8 +1,8 @@
 from ilogger.ilogger import log, get_logs
 
 if __name__ == "__main__":
-    log("c'est un message d'erreur.", "ERROR")
-    log("c'est un messade d'avertissement.", "WARNING")
+    log("se yon mesaj erreur.", "ERROR")
+    log("se yon mesaj avetisman an.", "WARNING")
 
     error_logs = get_logs("ERROR")
     warning_logs = get_logs("WARNING")

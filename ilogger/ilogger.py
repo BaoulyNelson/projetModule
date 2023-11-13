@@ -22,14 +22,15 @@ warning_logger.addHandler(warning_handler)
 
 def log(message, level):
     if len(message) > 100:
-        raise ValueError("Message should not exceed 100 characters")
+        raise ValueError("Mesaj la pa dwe depase 100 karakte")
 
     if level == "ERROR":
         error_logger.error(message)
     elif level == "WARNING":
         warning_logger.warning(message)
     else:
-        raise ValueError("Invalid log level. Use 'ERROR' or 'WARNING'.")
+        raise ValueError("Nivo log la envalid. itilize 'ERROR' oubyen 'WARNING'.")
+    
 
 def get_logs(log_level):
     if log_level == "ERROR":
@@ -37,7 +38,7 @@ def get_logs(log_level):
     elif log_level == "WARNING":
         log_file = os.path.join(LOG_DIR, WARNING_LOG_FILE)
     else:
-        raise ValueError("Invalid log level. Use 'ERROR' or 'WARNING'.")
+        raise ValueError("Nivo log la envalid. itilize 'ERROR' oubyen 'WARNING'.")
 
     with open(log_file, "r") as file:
         return file.readlines()
