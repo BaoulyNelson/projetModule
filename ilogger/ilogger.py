@@ -22,7 +22,7 @@ warning_logger.addHandler(warning_handler)
 
 def log(message, level):
     if len(message) > 100:
-        raise ValueError("Mesaj la pa dwe depase 100 karakte")
+        raise ValueError("Mesaj la pa dwe depase 100 karaktes")
 
     if level == "ERROR":
         error_logger.error(message)
